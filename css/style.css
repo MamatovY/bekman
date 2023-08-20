@@ -85,6 +85,7 @@ img {
   font-family: "Oswald";
   font-weight: 500;
   outline: none;
+  border-radius: 5px;
 }
 .header .nav__left {
   display: -webkit-box;
