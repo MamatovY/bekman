@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll('.nav__left a');
 const backToTopButton = document.getElementById('backToTop');
+const languageSelector = document.getElementById('languageSelector');
 
 navLinks.forEach(link => {
     link.addEventListener('click', smoothScroll);
@@ -34,4 +35,11 @@ backToTopButton.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+
+
+languageSelector.addEventListener('change', () => {
+    const selectedLanguage = languageSelector.value;
+    window.location.href = selectedLanguage; // Replace '.html' with the appropriate file extension of your pages
 });
