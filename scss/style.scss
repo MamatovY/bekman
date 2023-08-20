@@ -82,6 +82,20 @@ section {
     }
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    color: #F7654A;
+    z-index: 90;
+
+    svg {
+        background: #FFF;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+}
 
 .about {
     background: #F7654A;
