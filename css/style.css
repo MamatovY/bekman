@@ -1,10 +1,9 @@
 @import '../assets/fonts/oswald.css';
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -43,7 +42,6 @@ img {
   position: relative;
   min-height: 600px;
 }
-
 .header .backgroundRed {
   position: absolute;
   top: 0;
@@ -54,37 +52,33 @@ img {
   z-index: 9;
   background: #F7654A;
 }
-
 .header .background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
   z-index: 10;
   background: rgb(64, 65, 73);
 }
-
 .header .container {
   position: relative;
   z-index: 10;
 }
-
 .header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 0;
   margin-bottom: 200px;
 }
-
 .header .nav__lang {
   background: #F7654A;
   color: #FFF;
@@ -92,19 +86,16 @@ img {
   font-weight: 500;
   outline: none;
 }
-
 .header .nav__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 .header .nav__left .active {
   color: #F7654A;
   text-decoration: underline;
 }
-
 .header .nav__right {
   color: #F7654A;
 }
@@ -113,7 +104,6 @@ section {
   padding: 20px 0;
   margin-top: 80px;
 }
-
 section h2 {
   margin-bottom: 30px;
   text-align: center;
@@ -125,8 +115,8 @@ section h2 {
   right: 1%;
   color: #F7654A;
   z-index: 90;
+  cursor: pointer;
 }
-
 #backToTop svg {
   background: #FFF;
   border-radius: 50%;
@@ -138,27 +128,23 @@ section h2 {
   background: #F7654A;
   color: #FFF;
 }
-
 .about .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
 .about h2 {
   margin-bottom: 10px;
   text-align: left;
 }
-
 .about__img {
   text-align: right;
 }
-
 .about__img svg {
   width: 60%;
   height: auto;
@@ -168,10 +154,9 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
 .quality__img img {
   border-radius: 30% 10% 60% 10%;
 }
@@ -179,28 +164,24 @@ section h2 {
 .ourServices {
   text-align: center;
 }
-
 .ourServices__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 50px;
 }
-
 .ourServices__item {
   padding: 50px 20px;
   background: #F7F7F7;
   -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
-  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+          box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 }
-
 .ourServices__item-img {
   color: #F7654A;
   margin-bottom: 20px;
 }
-
 .ourServices__item-img svg {
   width: 60px;
   height: 60px;
@@ -211,20 +192,18 @@ section h2 {
   color: #FFF;
   padding: 60px 0;
 }
-
 .partners__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 16px 10px;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
 }
-
 .partners__img {
   width: 170px;
 }
@@ -232,33 +211,28 @@ section h2 {
 .contacts {
   margin-top: 50px;
 }
-
 .contacts__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 16px 10px;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
 }
-
 .contacts__item {
   width: 300px;
 }
-
 .contacts__item-img {
   color: #F7654A;
 }
-
 .contacts__item-img svg {
   width: 50px;
   height: 50px;
 }
-
 .contacts__item-title {
   color: #999999;
   margin: 10px 0;
@@ -270,17 +244,14 @@ section h2 {
   color: #FFF;
   padding: 15px 0;
 }
-
 .footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-/*# sourceMappingURL=style.css.map */
+      -ms-flex-align: center;
+          align-items: center;
+}/*# sourceMappingURL=style.css.map */
