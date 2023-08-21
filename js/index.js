@@ -39,7 +39,21 @@ backToTopButton.addEventListener('click', () => {
 
 
 
-languageSelector.addEventListener('change', () => {
-    const selectedLanguage = languageSelector.value;
-    window.location.href = selectedLanguage; // Replace '.html' with the appropriate file extension of your pages
-});
+// languageSelector.addEventListener('change', () => {
+//     const selectedLanguage = languageSelector.value;
+//     window.location.href = selectedLanguage; // Replace '.html' with the appropriate file extension of your pages
+// });
+
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'ru',
+            includedLanguages: 'en,ky,ru',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+const test = document.querySelector('#google_translate_element');
+console.log(test);

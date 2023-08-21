@@ -77,13 +77,24 @@ img {
         padding: 20px 0;
         margin-bottom: 200px;
 
-        &__lang {
-            background: #F7654A;
-            color: #FFF;
-            font-family: 'Oswald';
-            font-weight: 500;
-            outline: none;
-            border-radius: 5px;
+        #google_translate_element {
+            select {
+                background: #F7654A;
+                color: #FFF;
+                font-family: 'Oswald';
+                font-weight: 500;
+                outline: none;
+                border-radius: 5px;
+                border: none;
+            }
+
+            span {
+                display: none;
+            }
+
+            .goog-te-gadget {
+                font-size: 0;
+            }
         }
 
         &__left {
