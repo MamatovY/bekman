@@ -1,4 +1,5 @@
 @import '../assets/fonts/oswald.css';
+@import 'mixin.scss';
 
 * {
     margin: 0;
@@ -9,6 +10,7 @@
 body {
     font-family: 'Oswald';
     font-weight: 400;
+    @include adaptive-value('font-size', 16, 12, 3);
 }
 
 h1,
@@ -19,6 +21,17 @@ h4 {
     font-weight: 600;
 }
 
+h1 {
+    @include adaptive-value('font-size', 46, 24, 3);
+}
+
+h2 {
+    @include adaptive-value('font-size', 38, 18, 3);
+}
+
+h3 {
+    @include adaptive-value('font-size', 24, 16, 3);
+}
 
 .container {
     max-width: 1280px;
@@ -42,6 +55,11 @@ img {
     color: #FFF;
     position: relative;
     min-height: 600px;
+    @include adaptive-value('min-height', 600, 350, 3);
+
+    h1 {
+        @include adaptive-value('margin-top', 200, 100, 3);
+    }
 
     .backgroundRed {
         position: absolute;
@@ -75,7 +93,6 @@ img {
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        margin-bottom: 200px;
 
         #google_translate_element {
             select {
@@ -99,6 +116,7 @@ img {
 
         &__left {
             display: flex;
+            align-items: center;
             gap: 15px;
 
             .active {
@@ -115,7 +133,7 @@ img {
 
 section {
     padding: 20px 0;
-    margin-top: 80px;
+    @include adaptive-value('margin-top', 80, 40, 3);
 
     h2 {
         margin-bottom: 30px;
@@ -155,14 +173,18 @@ section {
         text-align: left;
     }
 
-    &__text {}
+    &__text {
+        @include adaptive-value('font-size', 24, 14, 3);
+    }
 
 
     &__img {
         text-align: right;
+        width: 60%;
+        margin-left: auto;
 
         svg {
-            width: 60%;
+            width: 100%;
             height: auto;
         }
     }
@@ -171,7 +193,12 @@ section {
 .quality {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
     align-items: center;
+
+    h2 {
+        margin-bottom: 0;
+    }
 
     &__img img {
         border-radius: 30% 10% 60% 10%;
@@ -182,14 +209,17 @@ section {
     text-align: center;
 
     &__items {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
         gap: 50px;
+        @include adaptive-value('gap', 50, 25, 3);
     }
 
     &__item {
-        padding: 50px 20px;
+        width: 280px;
+        padding: 30px 20px;
         background: #F7F7F7;
         box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
@@ -215,7 +245,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        justify-content: space-between;
+        justify-content: center;
         text-align: center;
         align-items: center;
     }
@@ -270,5 +300,42 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+
+@media (max-width:1300px) {
+    .container {
+        @include adaptive-value ('padding-left', 32, 16, 3);
+        @include adaptive-value ('padding-right', 32, 16, 3);
+    }
+}
+
+@media (max-width:425px) {
+    .nav {
+        &__items {
+            display: none;
+        }
+    }
+
+    .about {
+        .container {
+            grid-template-columns: 3fr 1fr;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    .ourServices {}
+
+    .quality {
+        grid-template-columns: 1fr;
+
+        &__img {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }
