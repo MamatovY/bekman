@@ -288,9 +288,9 @@ section h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 16px 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 .contacts__item {
