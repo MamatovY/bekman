@@ -12,6 +12,14 @@ body {
   font-size: calc(12px + 4 * ((100vw - 425px) / 1075));
 }
 
+html body {
+  top: 0 !important;
+}
+
+.skiptranslate iframe {
+  display: none;
+}
+
 h1,
 h2,
 h3,
