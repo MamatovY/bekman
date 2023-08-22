@@ -1,4 +1,4 @@
-const navLinks = document.querySelectorAll('.nav__left a');
+const navLinks = document.querySelectorAll('.nav__items a');
 const backToTopButton = document.getElementById('backToTop');
 const languageSelector = document.getElementById('languageSelector');
 const burgerButton = document.querySelector('.burger');
@@ -12,18 +12,23 @@ burgerButton.addEventListener('click', () => {
 });
 
 navLinks.forEach(link => {
-    link.addEventListener('click', smoothScroll);
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (navItems.classList.contains('active')) {
+            navItems.classList.remove('active');
+            burgerButton.classList.remove('active');
+            body.classList.remove('active');
+            setTimeout(() => {
+                smoothScroll(link.getAttribute('href'));
+            }, 300); // Задержка, чтобы убедиться, что класс 'active' удален
+        } else {
+            smoothScroll(link.getAttribute('href'));
+        }
+    });
 });
 
-function smoothScroll(e) {
-    console.log('click');
-    e.preventDefault();
-    const targetId = this.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
-    const targetPosition = targetElement.offsetTop;
-
-    window.scrollTo({
-        top: targetPosition,
+function smoothScroll(target) {
+    document.querySelector(target).scrollIntoView({
         behavior: 'smooth'
     });
 }
@@ -64,5 +69,3 @@ function googleTranslateElementInit() {
         'google_translate_element'
     );
 }
-const test = document.querySelector('#google_translate_element');
-console.log(test);

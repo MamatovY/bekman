@@ -15,6 +15,9 @@ body {
 body.active {
   overflow: hidden;
 }
+body.active #backToTop {
+  z-index: auto;
+}
 
 html body {
   top: 0 !important;
@@ -156,7 +159,7 @@ section h2 {
   bottom: 1%;
   right: 1%;
   color: #F7654A;
-  z-index: 90;
+  z-index: 80;
   cursor: pointer;
 }
 #backToTop svg {
