@@ -1,6 +1,15 @@
 const navLinks = document.querySelectorAll('.nav__left a');
 const backToTopButton = document.getElementById('backToTop');
 const languageSelector = document.getElementById('languageSelector');
+const burgerButton = document.querySelector('.burger');
+const navItems = document.querySelector('.nav__items');
+const body = document.querySelector('body');
+
+burgerButton.addEventListener('click', () => {
+    burgerButton.classList.toggle('active');
+    navItems.classList.toggle('active');
+    body.classList.toggle('active');
+});
 
 navLinks.forEach(link => {
     link.addEventListener('click', smoothScroll);
