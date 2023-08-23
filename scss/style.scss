@@ -152,7 +152,14 @@ img {
         }
 
         &__right {
-            color: #F7654A;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background: rgb(190, 49, 68);
+
+            svg {
+                width: 8em;
+                height: 2.4em;
+            }
         }
     }
 }
@@ -331,6 +338,18 @@ section {
         justify-content: space-between;
         align-items: center;
     }
+
+    &__logo {
+        padding: 5px 10px;
+        border-radius: 6px;
+        background: rgb(190, 49, 68);
+
+        svg {
+            width: 8em;
+            height: 2.4em;
+        }
+
+    }
 }
 
 
@@ -341,7 +360,7 @@ section {
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:430px) {
     .header {
 
         .burger {
