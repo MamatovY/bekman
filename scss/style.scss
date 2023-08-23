@@ -120,6 +120,12 @@ img {
         align-items: center;
         padding: 40px 0;
 
+        &__items {
+            a {
+                margin-right: 10px;
+            }
+        }
+
         #google_translate_element {
             select {
                 background: #F7654A;
@@ -143,7 +149,6 @@ img {
         &__left {
             display: flex;
             align-items: center;
-            gap: 15px;
 
             .active {
                 color: #F7654A;
@@ -360,7 +365,7 @@ section {
     }
 }
 
-@media (max-width:430px) {
+@media (max-width:460px) {
     .header {
 
         .burger {
@@ -420,6 +425,7 @@ section {
                 a {
                     display: block;
                     margin-bottom: 50px;
+                    margin-right: 0;
                 }
 
                 &.active {
